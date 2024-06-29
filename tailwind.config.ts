@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         banboon: "#fef3c7",
+        bbred: "#FF0000",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

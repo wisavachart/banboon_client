@@ -22,7 +22,7 @@ const SplashScreen = () => {
 
   return (
     <>
-      <div className=" bg-banboon w-full h-full flex justify-center items-center relative overflow-hidden">
+      <div className=" bg-bbred w-full h-full flex justify-center items-center relative overflow-hidden">
         <AnimatePresence>
           {isloding && (
             <motion.div

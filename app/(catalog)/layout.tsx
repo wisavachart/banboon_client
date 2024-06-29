@@ -1,9 +1,12 @@
+import NavigationWrapper from "@/components/navigation/NavigationWrapper";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Prompt } from "next/font/google";
 import "../globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
+const prompt_init = Prompt({
+  weight: ["300"],
+  subsets: ["thai"],
+});
 export const metadata: Metadata = {
   title: "บ้านบุญ (Baanboon Superstore)",
   description:
@@ -17,7 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${prompt_init.className} font-prompt`}>
+        <NavigationWrapper />
+        {children}
+      </body>
     </html>
   );
 }
