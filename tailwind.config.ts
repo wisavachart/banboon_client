@@ -8,9 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "320px",
+        xsm: "375px",
+        xsmm: "425px",
+      },
       colors: {
         banboon: "#fef3c7",
         bbred: "#FF0000",
+        // bbred: "#C80036",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

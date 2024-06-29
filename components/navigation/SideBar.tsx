@@ -3,68 +3,6 @@
 import { SidebarProps } from "@/lib/types";
 import { AnimatePresence, motion } from "framer-motion";
 
-const category = [
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-  {
-    id: 1,
-    name: "หมวดหมู่สินค้าที่ 1",
-  },
-];
 const SideBar = ({ isOpen, onClose }: SidebarProps) => {
   return (
     <AnimatePresence>
@@ -77,7 +15,7 @@ const SideBar = ({ isOpen, onClose }: SidebarProps) => {
             duration: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="fixed w-full md:w-72 h-full z-40  bg-red-600">
+          className="fixed w-full md:w-56 h-full z-40  bg-red-600">
           <div className="flex flex-col pt-3 px-5">
             <div className="w-full flex justify-end check" onClick={onClose}>
               X

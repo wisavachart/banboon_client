@@ -5,3 +5,6 @@ export interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
+export interface TitleHeaderProps {
+  title: string;
+}
