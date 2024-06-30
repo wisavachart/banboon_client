@@ -17,7 +17,7 @@ const SplashScreen = () => {
   useEffect(() => {
     setTimeout(() => {
       router.push("/catalog");
-    }, 3500);
+    }, 2000);
   }, []);
 
   return (

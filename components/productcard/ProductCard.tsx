@@ -8,7 +8,7 @@ const ProductCard = () => {
           <span className="text-white">สินค้ามาใหม่</span>
         </div>
         <div className="flex flex-col">
-          <div className="overflow-hidden  rounded-[14px] ">
+          <div className="overflow-hidden  rounded-t-[14px] ">
             <Image
               src="/product_img_test.jpg"
               width={350}
@@ -16,7 +16,7 @@ const ProductCard = () => {
               alt="img"
             />
           </div>
-          <div className="flex flex-col px-4 py-4 gap-2 bg-white ">
+          <div className="flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
             <h6>เครื่องเขียน</h6>
             <h2 className="prompt-semibold text-lg">ที่รองเมาส์หมีแพนด้า</h2>
             <div className="flex justify-between">
