@@ -6,10 +6,10 @@ const Menu = ({ onCategoryClick }: NavbarProps) => {
     console.log("open side bar");
   }
   return (
-    <div className="flex justify-between font-bold text-xl">
-      <button>หน้าแรก</button>
+    <div className="flex justify-between font-bold">
+      <p>หน้าแรก</p>
       <button onClick={onClick}>หมวดหมู่สินค้า</button>
-      <button>ติดต่อเรา</button>
+      <p>ติดต่อเรา</p>
     </div>
   );
 };

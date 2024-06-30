@@ -12,7 +12,7 @@ const Topbar = ({ onCategoryClick }: NavbarProps) => {
     <AnimatePresence>
       <motion.nav
         exit={{ opacity: 0, scale: 100 }}
-        className="mx-auto w-full fixed ">
+        className="mx-auto w-full fixed z-30">
         <div className="max-w-[1440px]  bg-bbred text-white content-center mx-auto pt-2 px-8 md:px-6 sm:pt-4 md:pt-4 ">
           {/* Normal Menu */}
           {isVisible && (

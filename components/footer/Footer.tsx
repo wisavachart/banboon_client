@@ -1,5 +1,7 @@
 const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <div className="max-w-[1440px] bg-bbred h-[90px] mx-auto">Footer here</div>
+  );
 };
 
 export default Footer;

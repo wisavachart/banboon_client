@@ -9,9 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        xs: "320px",
-        xsm: "375px",
-        xsmm: "425px",
+        stage1: "320px",
+        stage2: "400px",
+        stage3: "490px",
+        stage4: "556px",
       },
       colors: {
         banboon: "#fef3c7",

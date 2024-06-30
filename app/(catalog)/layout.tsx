@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/Footer";
 import NavigationWrapper from "@/components/navigation/NavigationWrapper";
 import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={`${prompt_init.className} font-prompt`}>
         <NavigationWrapper />
         {children}
+        <Footer />
       </body>
     </html>
   );
