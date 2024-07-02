@@ -1,22 +1,40 @@
 "use client";
 import { fetchCategory } from "@/lib/httpsRequest";
 import { SidebarProps } from "@/lib/types";
-import { category } from "@/staticMockUp/staticategory";
+import { useQuery } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import SidebarList from "./SidebarList";
 
-const SideBar = ({ isOpen, onClose }: SidebarProps) => {
-  const [selecCate, setSelectCate] = useState(0);
+interface CategoryMenuType {
+  _id: string;
+  title: string;
+}
 
-  useEffect(() => {
-    async function fetchTest() {
-      const res = await fetchCategory();
-      console.log(res);
-    }
-    fetchTest();
-  }, []);
+const SideBar = ({ isOpen, onClose }: SidebarProps) => {
+  const [selecCate, setSelectCate] = useState("");
+
+  const { data, isPending } = useQuery({
+    queryKey: ["category"],
+    queryFn: fetchCategory,
+  });
+
+  let content;
+  if (isPending) {
+    content = <p>Loading...</p>;
+  }
+  if (data) {
+    content = data.map((cate: CategoryMenuType) => (
+      <SidebarList
+        id={cate._id}
+        name={cate.title}
+        key={cate._id}
+        selecCate={selecCate}
+        onselect={setSelectCate}
+      />
+    ));
+  }
 
   return (
     <AnimatePresence>
@@ -45,15 +63,7 @@ const SideBar = ({ isOpen, onClose }: SidebarProps) => {
           </div>
           {/* MENU - List*/}
           <div className="overflow-y-scroll h-full" id="style-3">
-            {category.map((cate) => (
-              <SidebarList
-                id={cate.id}
-                name={cate.name}
-                key={cate.id}
-                selecCate={selecCate}
-                onselect={setSelectCate}
-              />
-            ))}
+            {content}
           </div>
         </motion.div>
       )}

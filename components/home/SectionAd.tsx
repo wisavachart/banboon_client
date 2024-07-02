@@ -7,7 +7,7 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 const SectionAd = () => {
   return (
-    <>
+    <div className="mt-6">
       <Swiper
         autoplay={{
           delay: 2500,
@@ -46,7 +46,7 @@ const SectionAd = () => {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 };
 

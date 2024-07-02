@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 interface SideBarCategoryListProps {
-  id: number;
+  id: string;
   name: string;
-  selecCate: number;
-  onselect: (idCate: number) => void;
+  selecCate: string;
+  onselect: (idCate: string) => void;
 }
 
 const SidebarList = ({
@@ -13,7 +13,7 @@ const SidebarList = ({
   onselect,
   selecCate,
 }: SideBarCategoryListProps) => {
-  function cateSelect(idCate: number) {
+  function cateSelect(idCate: string) {
     onselect(idCate);
   }
 
