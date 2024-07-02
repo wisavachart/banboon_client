@@ -1,15 +1,23 @@
 "use client";
-
+import { fetchCategory } from "@/lib/httpsRequest";
 import { SidebarProps } from "@/lib/types";
 import { category } from "@/staticMockUp/staticategory";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import SidebarList from "./SidebarList";
 
 const SideBar = ({ isOpen, onClose }: SidebarProps) => {
   const [selecCate, setSelectCate] = useState(0);
-  // console.log(selecCate);
+
+  useEffect(() => {
+    async function fetchTest() {
+      const res = await fetchCategory();
+      console.log(res);
+    }
+    fetchTest();
+  }, []);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -21,7 +29,7 @@ const SideBar = ({ isOpen, onClose }: SidebarProps) => {
             duration: 0.5,
             ease: [0, 0.71, 0.2, 1.01],
           }}
-          className="fixed w-[300px] md:w-[360px] h-full z-40 bg-bbred drop-shadow-[0_0_8px_rgba(0,0,0,0.8)] ">
+          className="fixed w-[300px] md:w-[360px] h-full z-40 bg-bbred drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]">
           <div className="flex flex-col pt-3 px-5">
             <div
               className="w-full flex justify-end hover:cursor-pointer "
@@ -36,7 +44,7 @@ const SideBar = ({ isOpen, onClose }: SidebarProps) => {
             </div>
           </div>
           {/* MENU - List*/}
-          <div className="overflow-y-scroll h-full">
+          <div className="overflow-y-scroll h-full" id="style-3">
             {category.map((cate) => (
               <SidebarList
                 id={cate.id}

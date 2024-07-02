@@ -13,7 +13,24 @@ const Topbar = ({ onCategoryClick }: NavbarProps) => {
       <motion.nav
         exit={{ opacity: 0, scale: 100 }}
         className="mx-auto w-full fixed z-30">
-        <div className="max-w-[1440px]  bg-bbred text-white content-center mx-auto pt-2 px-8 md:px-6 sm:pt-4 md:pt-4 ">
+        <div className="max-w-[1440px]  bg-bbred text-white content-center mx-auto pt-2 px-8 md:px-6 sm:pt-4 md:pt-4 relative">
+          {isVisible && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 2,
+                ease: [0, 0.71, 0.2, 1.01],
+              }}
+              className="absolute w-[1440px] mx-auto h-[300px] -top-10 left-0 overflow-hidden z-0">
+              <img
+                className="object-cover w-[1440px] "
+                src="/bg_overlay.svg"
+                alt=""
+              />
+            </motion.div>
+          )}
           {/* Normal Menu */}
           {isVisible && (
             <motion.div

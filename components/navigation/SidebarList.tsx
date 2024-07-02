@@ -22,7 +22,7 @@ const SidebarList = ({
       onClick={() => cateSelect(id)}
       className={
         selecCate === id
-          ? "flex relative bg-bbredsec custom_shadow_active hover:cursor-pointer pl-7 "
+          ? "flex relative bg-bbredsec custom_shadow_active hover:cursor-pointer pl-7"
           : "flex relative  hover:cursor-pointer hover:bg-bbredsec pl-5"
       }>
       {selecCate === id && (

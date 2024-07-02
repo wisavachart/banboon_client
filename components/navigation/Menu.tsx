@@ -5,10 +5,18 @@ const Menu = ({ onCategoryClick }: NavbarProps) => {
     onCategoryClick();
   }
   return (
-    <div className="flex justify-between font-bold">
-      <p>หน้าแรก</p>
-      <button onClick={onClick}>หมวดหมู่สินค้า</button>
-      <p>ติดต่อเรา</p>
+    <div className="flex justify-between font-bold relative z-20">
+      <p className="bg-bbredsec px-3 py-2 rounded-md shadow-md cursor-pointer">
+        หน้าแรก
+      </p>
+      <p
+        className="bg-bbredsec px-3 py-2 rounded-md shadow-md cursor-pointer"
+        onClick={onClick}>
+        หมวดหมู่สินค้า
+      </p>
+      <p className="bg-bbredsec px-3 py-2 rounded-md shadow-md cursor-pointer">
+        ติดต่อเรา
+      </p>
     </div>
   );
 };
