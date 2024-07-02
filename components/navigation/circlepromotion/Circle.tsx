@@ -15,7 +15,7 @@ const Circle = () => {
           delay: 0.2,
           ease: [0, 0.71, 0.2, 1.01],
         }}
-        className="bg-yellow-300 w-[350px] h-[350px] absolute -top-28 rounded-full flex justify-center items-center drop-shadow-xl z-10 ">
+        className="bg-bbyellow w-[350px] h-[350px] absolute -top-28 rounded-full flex justify-center items-center drop-shadow-xl z-10 ">
         <div className="flex flex-col absolute top-[120px] text-center">
           <motion.h1
             initial={{ x: 0 }}

@@ -14,9 +14,12 @@ const config: Config = {
         stage3: "490px",
         stage4: "556px",
       },
+
       colors: {
         banboon: "#fef3c7",
-        bbred: "#FF0000",
+        bbred: "#B80000",
+        bbredsec: "#E63234",
+        bbyellow: "#F6F54D",
         // bbred: "#C80036",
       },
       backgroundImage: {

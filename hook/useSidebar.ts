@@ -5,7 +5,6 @@ export const useSidebar = () => {
 
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => {
-    console.log("close");
     setSidebarOpen(false);
   };
   const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);

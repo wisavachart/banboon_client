@@ -1,5 +1,5 @@
 import Link from "next/link";
-import ProductCard from "../productcard/ProductCard";
+import ProductBestSellerCard from "../productcard/ProductBestSellerCard";
 import TitleHeader from "../titleheader/TitleHeader";
 
 const SectionBestSeller = () => {
@@ -16,14 +16,14 @@ const SectionBestSeller = () => {
 
       {/* SECTION WRAPPER */}
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8 gap-2 lg:px-0 md:px-6 sm:px-6 px-6">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
+        <ProductBestSellerCard />
       </div>
     </div>
   );

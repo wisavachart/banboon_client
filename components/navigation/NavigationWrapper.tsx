@@ -7,7 +7,9 @@ const NavigationWrapper = () => {
   const { isSidebarOpen, openSidebar, closeSidebar } = useSidebar();
   return (
     <>
-      <SideBar isOpen={isSidebarOpen} onClose={closeSidebar} />
+      <div className="max-w-[1440px] mx-auto">
+        <SideBar isOpen={isSidebarOpen} onClose={closeSidebar} />
+      </div>
       <Topbar onCategoryClick={openSidebar} />
     </>
   );
