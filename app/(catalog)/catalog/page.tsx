@@ -1,5 +1,3 @@
-"use client";
-
 import SectionAd from "@/components/home/SectionAd";
 import SectionAdSecond from "@/components/home/SectionAdSecond";
 import SectionBestSeller from "@/components/home/SectionBestSeller";

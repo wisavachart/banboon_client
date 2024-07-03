@@ -8,3 +8,12 @@ export interface SidebarProps {
 export interface TitleHeaderProps {
   title: string;
 }
+
+export type TitleCatalogNameProps = {
+  title: String;
+};
+
+export type FetchCategoryByIdParams = {
+  id: string;
+  signal: AbortSignal;
+};
