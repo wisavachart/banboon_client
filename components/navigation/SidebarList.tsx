@@ -6,6 +6,7 @@ interface SideBarCategoryListProps {
   name: string;
   selecCate: string;
   onselect: (idCate: string) => void;
+  onClose: () => void;
 }
 
 const SidebarList = ({
@@ -13,6 +14,7 @@ const SidebarList = ({
   name,
   onselect,
   selecCate,
+  onClose,
 }: SideBarCategoryListProps) => {
   function cateSelect(idCate: string) {
     onselect(idCate);
@@ -21,7 +23,12 @@ const SidebarList = ({
   return (
     <Link href={`/catalog/${id}`}>
       <motion.div
-        onClick={() => cateSelect(id)}
+        onClick={() => {
+          cateSelect(id);
+          setTimeout(() => {
+            onClose();
+          }, 200);
+        }}
         className={
           selecCate === id
             ? "flex relative bg-bbredsec custom_shadow_active hover:cursor-pointer pl-7"

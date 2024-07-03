@@ -27,16 +27,19 @@ const SplashScreen = () => {
           {isloding && (
             <motion.div
               initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 2.5 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 700,
-                damping: 15,
-                duration: 3,
-                delay: 0.2,
-                ease: [0, 0.71, 0.2, 1.01],
-              }}>
+              animate={{
+                opacity: 1,
+                scale: 2.5,
+                transition: {
+                  type: "spring",
+                  stiffness: 700,
+                  damping: 15,
+                  duration: 3,
+                  delay: 0.2,
+                  ease: [0, 0.71, 0.2, 1.01],
+                },
+              }}
+              exit={{ opacity: 0, transition: { ease: [0, 0.71, 0.2, 1.01] } }}>
               <Image
                 className="w-[100px] sm:w-[200px]"
                 src="/baanboon_logo_v2.svg"

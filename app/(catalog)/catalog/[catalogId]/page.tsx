@@ -11,7 +11,7 @@ const CatalogDetailpage = ({ params }: { params: { catalogId: string } }) => {
   });
 
   return (
-    <div className="max-w-[1140px] mx-auto stage1:pt-[13rem] stage2:pt-[15rem] stage3:pt-[17rem] stage4:pt-[20rem] sm:pt-[22rem] md:pt-[20rem] lg:pt-[21rem]">
+    <div className="max-w-[1140px] mx-auto stage1:pt-[13rem] stage2:pt-[15rem] stage3:pt-[17rem] stage4:pt-[20rem] sm:pt-[22rem] md:pt-[20rem] lg:pt-[21rem] h-screen">
       {isLoading && <p>Loding....</p>}
       {categoryName && <TitleCatalogName title={categoryName.title} />}
     </div>
