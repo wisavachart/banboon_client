@@ -1,13 +1,13 @@
 import { NavbarProps } from "@/lib/types";
 import Link from "next/link";
 
-const Menu = ({ onCategoryClick }: NavbarProps) => {
+const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
   function onClick() {
     onCategoryClick();
   }
   return (
     <div className="flex justify-between font-bold relative z-20">
-      <Link href="/catalog">
+      <Link href="/catalog" onClick={() => setSelectCate("")}>
         <p className="bg-bbredsec px-3 py-2 rounded-md shadow-md cursor-pointer hover:bg-red-500">
           หน้าแรก
         </p>

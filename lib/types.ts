@@ -1,9 +1,12 @@
 export interface NavbarProps {
   onCategoryClick: () => void;
+  setSelectCate: (idCate: string) => void;
 }
 export interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
+  selecCate: string;
+  setSelectCate: (idCate: string) => void;
 }
 export interface TitleHeaderProps {
   title: string;

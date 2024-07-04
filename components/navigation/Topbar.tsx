@@ -6,7 +6,7 @@ import Image from "next/image";
 import Menu from "./Menu";
 import Circle from "./circlepromotion/Circle";
 
-const Topbar = ({ onCategoryClick }: NavbarProps) => {
+const Topbar = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
   const isVisible = useHideOnScrollDown();
   return (
     <AnimatePresence>
@@ -46,7 +46,10 @@ const Topbar = ({ onCategoryClick }: NavbarProps) => {
               className="max-w-[1140px] content-center mx-auto flex justify-between">
               <div className="flex-col flex-1">
                 <div>
-                  <Menu onCategoryClick={onCategoryClick} />
+                  <Menu
+                    onCategoryClick={onCategoryClick}
+                    setSelectCate={setSelectCate}
+                  />
                 </div>
                 <div className="relative">
                   <Image
@@ -70,7 +73,10 @@ const Topbar = ({ onCategoryClick }: NavbarProps) => {
               exit={{ opacity: 0, scale: 0.5 }}
               className="max-w-[1140px] pt-5 content-center mx-auto flex justify-between items-center ">
               <div className="flex-1">
-                <Menu onCategoryClick={onCategoryClick} />
+                <Menu
+                  onCategoryClick={onCategoryClick}
+                  setSelectCate={setSelectCate}
+                />
               </div>
               <div className="flex-1 hidden md:flex justify-end items-center ">
                 <img src="/shopname_mini.svg" alt="" />

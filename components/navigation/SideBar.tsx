@@ -1,15 +1,16 @@
 "use client";
-
 import { SidebarProps } from "@/lib/types";
 import { useGetCategory } from "@/service/queries";
 import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import SidebarList from "./SidebarList";
 
-const SideBar = ({ isOpen, onClose }: SidebarProps) => {
-  const [selecCate, setSelectCate] = useState("");
-
+const SideBar = ({
+  isOpen,
+  onClose,
+  selecCate,
+  setSelectCate,
+}: SidebarProps) => {
   const category = useGetCategory();
   let loadingsideBarcontent;
   if (category.isPending) {

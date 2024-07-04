@@ -2,6 +2,7 @@ import { useState } from "react";
 
 export const useSidebar = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [selecCate, setSelectCate] = useState("");
 
   const openSidebar = () => setSidebarOpen(true);
   const closeSidebar = () => {
@@ -14,5 +15,7 @@ export const useSidebar = () => {
     openSidebar,
     closeSidebar,
     toggleSidebar,
+    selecCate,
+    setSelectCate,
   };
 };

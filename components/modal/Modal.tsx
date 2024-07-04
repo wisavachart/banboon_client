@@ -1,5 +1,5 @@
 const Modal = () => {
-  return <div>Modal</div>;
+  return <div>THIS IS MODAL</div>;
 };
 
 export default Modal;
