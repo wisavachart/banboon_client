@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 
-export const useDebounce = (value: number, delay: number) => {
-  const [debouncedValue, setDebouncedValue] = useState(value);
+const useSearchDebounce = (value: string, delay: number) => {
+  const [debouncedValue, setDebouncedValue] = useState<string>(value);
+
   useEffect(() => {
     const handler = setTimeout(() => {
       setDebouncedValue(value);
@@ -13,3 +14,5 @@ export const useDebounce = (value: number, delay: number) => {
   }, [value, delay]);
   return debouncedValue;
 };
+
+export default useSearchDebounce;

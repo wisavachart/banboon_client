@@ -9,11 +9,19 @@ export interface TitleHeaderProps {
   title: string;
 }
 
-export type TitleCatalogNameProps = {
-  title: String;
-};
+/// NEW WAY
+export interface Product {
+  _id: string;
+  title: string;
+}
+export interface Category {
+  _id: string;
+  title: string;
+}
 
-export type FetchCategoryByIdParams = {
-  id: string;
-  signal: AbortSignal;
-};
+export interface ProductResponse {
+  productBycategory: Product[];
+  page: number;
+  totalPages: number;
+  totalCount: number;
+}
