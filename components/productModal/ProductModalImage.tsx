@@ -1,8 +1,10 @@
+import ProductmodalImgGallary from "./ProductmodalImgGallary";
+
 const ProductModalImage = () => {
   return (
     <div className="w-full flex justify-center">
-      <div className="w-full h-[250px] text-white check rounded-md flex justify-center">
-        <h1>IMAGE HERE</h1>
+      <div className="w-full h-[250px] text-white rounded-tl-md rounded-tr-md flex justify-center overflow-hidden">
+        <ProductmodalImgGallary />
       </div>
     </div>
   );

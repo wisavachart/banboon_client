@@ -154,3 +154,7 @@ body,
 #style-3::-webkit-scrollbar-thumb {
   background-color: #e08888;
 }
+
+.swiper-pagination-bullet-active {
+  background-color: #b80000 !important;
+}

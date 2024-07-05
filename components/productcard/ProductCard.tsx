@@ -18,15 +18,21 @@ const ProductCard = () => {
               alt="img"
             />
           </div>
-          <div className="flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
+          <div className="stage1:text-[13px] stage2:text-[16px] flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
             <h6>เครื่องเขียน</h6>
-            <h2 className="prompt-semibold text-lg">ที่รองเมาส์หมีแพนด้า</h2>
+            <h2 className="prompt-semibold stage1:text-[14px] stage2:text-lg">
+              ที่รองเมาส์หมีแพนด้า
+            </h2>
             <div className="flex justify-between">
-              <h1 className="prompt-extrabold text-xl">20 บาท</h1>
+              <h1 className="stage1:text-[16px] stage2:text-xl prompt-extrabold text-xl">
+                20 บาท
+              </h1>
               <button
                 className="px-2 py-1 bg-bbred text-white rounded-[5px]"
                 onClick={openModal}>
-                <span className="text-[16px]">ดูสินค้า</span>
+                <span className="stage1:text-[13px] stage2:text-[16px] ">
+                  ดูสินค้า
+                </span>
               </button>
             </div>
           </div>
