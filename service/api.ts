@@ -6,7 +6,7 @@ const axiosInstance = axios.create({ baseURL: BASE_URL });
 export const getNewArrivalProduct = async () => {
   return (
     await axiosInstance.get<Product[]>("/products?new=newarrival")
-  ).data.map((newProd) => newProd._id);
+  ).data.map((newProd) => newProd);
 };
 
 export const getCategoryProduct = async () => {
@@ -32,6 +32,5 @@ export const getProductbyCategoryID = async (
 };
 
 export const getProductbyId = async (id: string) => {
-  // not implement yet
-  return;
+  return (await axiosInstance.get<Product>(`/products/${id}`)).data;
 };

@@ -4,6 +4,7 @@ import {
   getCategoryProduct,
   getNewArrivalProduct,
   getProductbyCategoryID,
+  getProductbyId,
 } from "./api";
 
 export function useNewProduct() {
@@ -35,5 +36,13 @@ export function useGetProductByCategory(
     queryKey: ["productBycategory", id, { page }, search],
     queryFn: () => getProductbyCategoryID(id, page, search),
     placeholderData: keepPreviousData,
+  });
+}
+
+export function useGetproductByID(id: string, fetchSwith: boolean) {
+  return useQuery({
+    queryKey: ["productdetailbyid", id],
+    queryFn: () => getProductbyId(id),
+    enabled: fetchSwith,
   });
 }

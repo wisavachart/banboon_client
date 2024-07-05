@@ -16,7 +16,12 @@ export interface TitleHeaderProps {
 export interface Product {
   _id: string;
   title: string;
+  category: Category;
+  price: number;
+  media: string[];
+  isNewArrival?: boolean;
 }
+
 export interface Category {
   _id: string;
   title: string;
@@ -33,4 +38,9 @@ export type ModalState = {
   isOpen: boolean;
   openModal: () => void;
   closeModal: () => void;
+  productID: string;
+  setProductIdModal: (id: string) => void;
+  fetchSwitch: boolean;
+  setFetchOn: () => void;
+  setFetchoff: () => void;
 };

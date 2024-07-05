@@ -1,11 +1,17 @@
-const ProductModalDetail = () => {
+import { Product } from "@/lib/types";
+
+interface ProductModalDetailPROPS {
+  producDetail: Product;
+}
+
+const ProductModalDetail = ({ producDetail }: ProductModalDetailPROPS) => {
   return (
     <div className="w-full flex flex-col mb-3 mt-3 ">
       <div className=" flex flex-col gap-3">
         <div className="bg-bbred max-w-[100px] text-center rounded-md text-white">
           <span>สินค้าใหม่</span>
         </div>
-        <h1 className="text-[20px] prompt-bold">ปากกาเจลหมึกลื่นมาก</h1>
+        <h1 className="text-[20px] prompt-bold">{producDetail.title}</h1>
       </div>
       <div className="flex flex-col mt-3 gap-3">
         <div>
