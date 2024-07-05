@@ -30,3 +30,8 @@ export const getProductbyCategoryID = async (
     )
   ).data;
 };
+
+export const getProductbyId = async (id: string) => {
+  // not implement yet
+  return;
+};

@@ -1,5 +1,6 @@
 import Footer from "@/components/footer/Footer";
 import NavigationWrapper from "@/components/navigation/NavigationWrapper";
+import Productmodal from "@/components/productModal/Productmodal";
 import TanstackProvider from "@/providers/TanstackProvider";
 import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${prompt_init.className} font-prompt`}>
         <TanstackProvider>
+          <Productmodal />
           <NavigationWrapper />
           {children}
           <Footer />

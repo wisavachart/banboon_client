@@ -28,3 +28,9 @@ export interface ProductResponse {
   totalPages: number;
   totalCount: number;
 }
+
+export type ModalState = {
+  isOpen: boolean;
+  openModal: () => void;
+  closeModal: () => void;
+};
