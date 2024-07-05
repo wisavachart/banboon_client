@@ -1,6 +1,6 @@
 const ProductModalDetail = () => {
   return (
-    <div className="w-full  flex flex-col mb-3 mt-3">
+    <div className="w-full flex flex-col mb-3 mt-3 ">
       <div className=" flex flex-col gap-3">
         <div className="bg-bbred max-w-[100px] text-center rounded-md text-white">
           <span>สินค้าใหม่</span>
