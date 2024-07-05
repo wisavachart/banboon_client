@@ -4,6 +4,7 @@ import Productmodal from "@/components/productModal/Productmodal";
 import TanstackProvider from "@/providers/TanstackProvider";
 import type { Metadata } from "next";
 import { Prompt } from "next/font/google";
+import { Suspense } from "react";
 import "../globals.css";
 
 const prompt_init = Prompt({
@@ -25,7 +26,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${prompt_init.className} font-prompt`}>
         <TanstackProvider>
-          <Productmodal />
+          <Suspense fallback={null}>
+            <Productmodal />
+          </Suspense>
           <NavigationWrapper />
           {children}
           <Footer />
