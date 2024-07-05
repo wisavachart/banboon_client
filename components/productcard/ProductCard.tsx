@@ -1,6 +1,5 @@
 import useModalStore from "@/hook/useOpenmodal";
 import Image from "next/image";
-import Link from "next/link";
 // import Link from "next/link";
 const ProductCard = () => {
   const { openModal } = useModalStore();
@@ -24,13 +23,11 @@ const ProductCard = () => {
             <h2 className="prompt-semibold text-lg">ที่รองเมาส์หมีแพนด้า</h2>
             <div className="flex justify-between">
               <h1 className="prompt-extrabold text-xl">20 บาท</h1>
-              <Link href="?modal=true">
-                <button
-                  className="px-2 py-1 bg-bbred text-white rounded-[5px]"
-                  onClick={openModal}>
-                  <span className="text-[16px]">ดูสินค้า</span>
-                </button>
-              </Link>
+              <button
+                className="px-2 py-1 bg-bbred text-white rounded-[5px]"
+                onClick={openModal}>
+                <span className="text-[16px]">ดูสินค้า</span>
+              </button>
             </div>
           </div>
         </div>

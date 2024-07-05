@@ -1,16 +1,13 @@
 "use client";
-import Link from "next/link";
-import { usePathname, useSearchParams } from "next/navigation";
+import useModalStore from "@/hook/useOpenmodal";
 import Modal from "../modal/Modal";
 import ProductModalDetail from "./ProductModalDetail";
 import ProductModalImage from "./ProductModalImage";
 
 const Productmodal = () => {
-  const searchParams = useSearchParams();
-  const modal = searchParams.get("modal");
-  const pathname = usePathname();
+  const { isOpen, closeModal } = useModalStore();
   return (
-    modal && (
+    isOpen && (
       <Modal>
         <div className="bg-white rounded-md p-4 stage1:max-w-[320px] ">
           <div className="flex flex-col">
@@ -18,13 +15,12 @@ const Productmodal = () => {
             <ProductModalDetail />
           </div>
           <div className="w-full flex justify-end">
-            <Link href={pathname}>
-              <button
-                type="button"
-                className="bg-bbred text-white p-2 rounded-md text-[14px]">
-                ปิดหน้าต่าง
-              </button>
-            </Link>
+            <button
+              onClick={closeModal}
+              type="button"
+              className="bg-bbred text-white p-2 rounded-md text-[14px]">
+              ปิดหน้าต่าง
+            </button>
           </div>
         </div>
       </Modal>
