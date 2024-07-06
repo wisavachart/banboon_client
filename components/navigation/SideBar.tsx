@@ -4,6 +4,7 @@ import { useGetCategory } from "@/service/queries";
 import { AnimatePresence, motion } from "framer-motion";
 import { FaXmark } from "react-icons/fa6";
 import SidebarList from "./SidebarList";
+import SideBarListStatic from "./SidebarListStatic";
 
 const SideBar = ({
   isOpen,
@@ -74,6 +75,20 @@ const SideBar = ({
             }}
             className="overflow-y-scroll h-full"
             id="style-3">
+            <SideBarListStatic
+              id="newavailable"
+              name="สินค้ามาใหม่"
+              selecCate={selecCate}
+              onselect={setSelectCate}
+              onClose={onClose}
+            />
+            <SideBarListStatic
+              id="bestseller"
+              name="สินค้าขายดี"
+              selecCate={selecCate}
+              onselect={setSelectCate}
+              onClose={onClose}
+            />
             {category.data?.map((item) => (
               <SidebarList
                 key={item._id}
