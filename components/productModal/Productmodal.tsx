@@ -2,6 +2,7 @@
 import useModalStore from "@/hook/useOpenmodal";
 import { useGetproductByID } from "@/service/queries";
 import { AnimatePresence, motion } from "framer-motion";
+import LoadingModal from "../loader/LoadingModal";
 import Modal from "../modal/Modal";
 import ProductModalDetail from "./ProductModalDetail";
 import ProductModalImage from "./ProductModalImage";
@@ -22,9 +23,11 @@ const Productmodal = () => {
             initial={{ opacity: 0, scale: 0, rotate: "12.5deg" }}
             animate={{ opacity: 1, scale: 1, rotate: "0deg" }}
             exit={{ opacity: 0, scale: 0, rotate: "0deg" }}
-            className="bg-white rounded-md stage1:max-w-[320px] stage3:max-w-[480px] lg:max-w-[1000px]">
+            className={`${
+              isPending ? "bg-transparent" : "bg-white"
+            } rounded-md stage1:max-w-[320px] stage3:max-w-[480px] lg:max-w-[1000px]`}>
             {isPending ? (
-              <p>loading...</p>
+              <LoadingModal />
             ) : isError ? (
               <p>Error...</p>
             ) : (
@@ -33,7 +36,7 @@ const Productmodal = () => {
                   <div className="lg:flex-1">
                     <ProductModalImage imgData={data?.media} />
                   </div>
-                  <div className="p-4 lg:p-8 lg:flex-1 lg:flex lg:flex-col lg:justify-between">
+                  <div className="p-4 lg:p-8 md:min-w-[500px] lg:flex-1 lg:flex lg:flex-col lg:justify-between ">
                     <ProductModalDetail producDetail={data} />
                     <button
                       onClick={closeModal}

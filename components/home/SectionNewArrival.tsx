@@ -7,17 +7,18 @@ import ProductCard from "../productcard/ProductCard";
 import TitleHeader from "../titleheader/TitleHeader";
 
 const SectionNewArrival = () => {
-  const newProductId = useNewProduct();
+  const { data, isPending, isError, error } = useNewProduct(1, "");
 
-  if (newProductId.isPending) {
-    return <LoadingSection />;
+  if (isPending) {
+    return <LoadingSection bigScreenSkeleton={4} smallScreenSkeleton={2} />;
   }
-  if (newProductId.isError) {
+  if (isError) {
     return <span>Error</span>;
   }
+
   return (
     <div className="mb-16">
-      <div className="w-full  flex justify-between mb-8 items-baseline px-6 sm:px-6 md:px-6 lg:px-6 xl:px-0">
+      <div className="w-full flex justify-between mb-8 items-baseline px-6 sm:px-6 md:px-6 lg:px-6 xl:px-0">
         <TitleHeader title="สินค้ามาใหม่" />
         <Link href="/catalog/newavailable">
           <h6 className="prompt-regular  xs:text-[16px] md:text-xl ">
@@ -26,8 +27,8 @@ const SectionNewArrival = () => {
         </Link>
       </div>
       {/* SECTION WRAPPER */}
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8 gap-2 lg:px-0 md:px-6 sm:px-6  px-6">
-        {newProductId.data?.slice(0, 8).map((data) => (
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8 gap-2 lg:px-0 md:px-6 sm:px-6 px-6">
+        {data?.newarrilvalproduct?.slice(0, 8).map((data) => (
           <ProductCard key={data._id} productData={data} />
         ))}
       </div>

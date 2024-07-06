@@ -1,5 +1,6 @@
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import {
+  getBestSellerProduct,
   getCategoryDetail,
   getCategoryProduct,
   getNewArrivalProduct,
@@ -7,12 +8,21 @@ import {
   getProductbyId,
 } from "./api";
 
-export function useNewProduct() {
+export function useNewProduct(page: number, search?: string) {
   return useQuery({
-    queryKey: ["newproduct"],
-    queryFn: getNewArrivalProduct,
+    queryKey: ["newproduct", { page }, search],
+    queryFn: () => getNewArrivalProduct(page, search),
+    placeholderData: keepPreviousData,
   });
 }
+export function useBestseller(page: number, search?: string) {
+  return useQuery({
+    queryKey: ["bestSellerproduct", { page }, search],
+    queryFn: () => getBestSellerProduct(page, search),
+    placeholderData: keepPreviousData,
+  });
+}
+
 export function useGetCategory() {
   return useQuery({
     queryKey: ["category"],

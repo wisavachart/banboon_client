@@ -24,11 +24,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${prompt_init.className} font-prompt`}>
+      <body className={`${prompt_init.className} font-prompt `}>
         <TanstackProvider>
           <Suspense fallback={null}>
             <Productmodal />
           </Suspense>
+
           <NavigationWrapper />
           {children}
           <Footer />

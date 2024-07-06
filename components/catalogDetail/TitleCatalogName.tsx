@@ -1,6 +1,7 @@
 "use client";
 
 import { useGetCategoryDetail } from "@/service/queries";
+import LoadingTitleSkeleton from "../loader/LoadingTitleSkeleton";
 
 interface TitleCatalogNamePROPS {
   params: string;
@@ -9,7 +10,7 @@ interface TitleCatalogNamePROPS {
 const TitleCatalogName = ({ params }: TitleCatalogNamePROPS) => {
   const categoryDetail = useGetCategoryDetail(params);
   if (categoryDetail.isPending) {
-    return <div>Loading...</div>;
+    return <LoadingTitleSkeleton />;
   }
   if (categoryDetail.isError) {
     return <div>error</div>;

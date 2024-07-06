@@ -19,7 +19,9 @@ export interface Product {
   category: Category;
   price: number;
   media: string[];
+  description: string;
   isNewArrival?: boolean;
+  isBestSeller?: boolean;
 }
 
 export interface Category {
@@ -29,6 +31,18 @@ export interface Category {
 
 export interface ProductResponse {
   productBycategory: Product[];
+  page: number;
+  totalPages: number;
+  totalCount: number;
+}
+export interface NewProductResponse {
+  newarrilvalproduct: Product[];
+  page: number;
+  totalPages: number;
+  totalCount: number;
+}
+export interface BestSellerProductResponse {
+  bestSellerProduct: Product[];
   page: number;
   totalPages: number;
   totalCount: number;

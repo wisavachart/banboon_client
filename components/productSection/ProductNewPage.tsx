@@ -1,21 +1,18 @@
 "use client";
 
 import useSearchDebounce from "@/hook/useSearchDebounce";
-import { useGetProductByCategory } from "@/service/queries";
+import { useNewProduct } from "@/service/queries";
 import { useState } from "react";
 import LoadingSection from "../loader/LoadingSection";
 import ProductCard from "../productcard/ProductCard";
-interface ProductSectionBycategoryProps {
-  params: string;
-}
 
-const ProductSection = ({ params }: ProductSectionBycategoryProps) => {
+const ProductNewPage = () => {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
   const debouncedValue = useSearchDebounce(search, 1000);
 
   const { data, isPending, isError, error, isPlaceholderData, isFetching } =
-    useGetProductByCategory(params, page, debouncedValue);
+    useNewProduct(page, debouncedValue);
 
   function setNextpage() {
     setPage(page + 1);
@@ -59,7 +56,7 @@ const ProductSection = ({ params }: ProductSectionBycategoryProps) => {
             />
             {/* PRODUCT */}
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8 gap-2 lg:px-0 md:px-6 sm:px-6 px-6">
-              {data?.productBycategory.map((product) => (
+              {data?.newarrilvalproduct?.map((product) => (
                 <ProductCard key={product._id} productData={product} />
               ))}
             </div>
@@ -102,4 +99,4 @@ const ProductSection = ({ params }: ProductSectionBycategoryProps) => {
   );
 };
 
-export default ProductSection;
+export default ProductNewPage;

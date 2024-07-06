@@ -1,12 +1,32 @@
-import { Category, Product, ProductResponse } from "@/lib/types";
+import {
+  BestSellerProductResponse,
+  Category,
+  NewProductResponse,
+  Product,
+  ProductResponse,
+} from "@/lib/types";
 import axios from "axios";
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 const axiosInstance = axios.create({ baseURL: BASE_URL });
 
-export const getNewArrivalProduct = async () => {
+// export const getNewArrivalProduct = async () => {
+//   return (
+//     await axiosInstance.get<Product[]>("/products?new=newarrival")
+//   ).data.map((newProd) => newProd);
+// };
+export const getNewArrivalProduct = async (page = 1, search?: string) => {
   return (
-    await axiosInstance.get<Product[]>("/products?new=newarrival")
-  ).data.map((newProd) => newProd);
+    await axiosInstance.get<NewProductResponse>(
+      `/products?new=newarrival&page=${page}&search=${search}`
+    )
+  ).data;
+};
+export const getBestSellerProduct = async (page = 1, search?: string) => {
+  return (
+    await axiosInstance.get<BestSellerProductResponse>(
+      `/products?new=bestseller&page=${page}&search=${search}`
+    )
+  ).data;
 };
 
 export const getCategoryProduct = async () => {

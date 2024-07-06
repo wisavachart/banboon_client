@@ -15,17 +15,16 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
         <div className="relative flex-1">
           <div className="absolute left-5 bg-bbred px-3">
             <span className="text-white">
-              {productData.isNewArrival ? "สินค้ามาใหม่" : null}
+              {productData.isNewArrival
+                ? "สินค้ามาใหม่"
+                : productData.isBestSeller
+                ? "สินค้าขายดี"
+                : null}
             </span>
           </div>
           <div className="flex flex-col">
             <div className="overflow-hidden  rounded-t-[14px] ">
-              <Image
-                src={productData.media[1]}
-                width={350}
-                height={350}
-                alt="img"
-              />
+              <Image src="/img1.png" width={350} height={350} alt="img" />
             </div>
             <div className="stage1:text-[13px] stage2:text-[16px] flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
               <h6>{productData.category.title}</h6>
