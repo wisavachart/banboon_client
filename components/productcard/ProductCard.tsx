@@ -27,7 +27,11 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
               <Image src="/img1.png" width={350} height={350} alt="img" />
             </div>
             <div className="stage1:text-[13px] stage2:text-[16px] flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
-              <h6>{productData.category.title}</h6>
+              {productData?.category?.title ? (
+                <h6>{productData.category.title}</h6>
+              ) : (
+                <h6>no category</h6>
+              )}
               <h2 className="prompt-semibold stage1:text-[14px] stage2:text-lg">
                 {productData.title}
               </h2>

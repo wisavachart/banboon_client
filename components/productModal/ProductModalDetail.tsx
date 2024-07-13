@@ -28,7 +28,13 @@ const ProductModalDetail = ({ producDetail }: ProductModalDetailPROPS) => {
         <div>
           <h6 className="prompt-medium">
             ประเภทสินค้า :
-            <span className="prompt-light">{producDetail.category.title}</span>
+            {producDetail.category?.title ? (
+              <span className="prompt-light">
+                {producDetail.category.title}
+              </span>
+            ) : (
+              <span className="prompt-light">no category</span>
+            )}
           </h6>
         </div>
         <div className="flex flex-col gap-2">
