@@ -18,6 +18,7 @@ export interface Product {
   title: string;
   category: Category;
   price: number;
+  imageCover: string;
   media: string[];
   description: string;
   isNewArrival?: boolean;

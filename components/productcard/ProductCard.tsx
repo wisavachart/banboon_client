@@ -24,7 +24,14 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
           </div>
           <div className="flex flex-col">
             <div className="overflow-hidden  rounded-t-[14px] ">
-              <Image src="/img1.png" width={350} height={350} alt="img" />
+              <Image
+                src={
+                  productData.imageCover ? productData.imageCover : "/img1.png"
+                }
+                width={350}
+                height={350}
+                alt="img"
+              />
             </div>
             <div className="stage1:text-[13px] stage2:text-[16px] flex flex-col px-4 py-4 gap-2 bg-white rounded-b-[14px] ">
               {productData?.category?.title ? (
