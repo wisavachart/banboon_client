@@ -34,7 +34,10 @@ const Productmodal = () => {
               <>
                 <div className="flex flex-col  lg:flex-row">
                   <div className="lg:flex-1">
-                    <ProductModalImage imgData={data?.media} />
+                    <ProductModalImage
+                      imgData={data?.media}
+                      imgCover={data?.imageCover}
+                    />
                   </div>
                   <div className="p-4 lg:p-8 md:min-w-[500px] lg:flex-1 lg:flex lg:flex-col lg:justify-between ">
                     <ProductModalDetail producDetail={data} />

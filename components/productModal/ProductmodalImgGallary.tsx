@@ -5,7 +5,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { ProductModalImageProps } from "./ProductModalImage";
-const ProductmodalImgGallary = ({ imgData }: ProductModalImageProps) => {
+
+interface GallaryPROPS {
+  gallary?: string[];
+}
+const ProductmodalImgGallary = ({ gallary }: GallaryPROPS) => {
   return (
     <Swiper
       autoplay={{
@@ -17,7 +21,7 @@ const ProductmodalImgGallary = ({ imgData }: ProductModalImageProps) => {
       }}
       modules={[Pagination, Autoplay]}
       className="mySwiper">
-      {imgData?.map((item) => (
+      {gallary?.map((item) => (
         <SwiperSlide key={item}>
           <div className="mb-16 flex h-[250px] stage3:h-[480px] lg:h-[500px] justify-center items-center">
             <img
