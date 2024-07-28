@@ -20,8 +20,18 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
         className="drop-shadow-xl rounded-[14px] cursor-pointer"
         onClick={handleClick}>
         <div className="relative flex-1">
-          <div className="absolute left-5 bg-bbred px-3">
-            <span className="text-white">
+          <div
+            className={
+              productData.isNewArrival
+                ? `absolute left-5 bg-bbyellow px-3`
+                : `absolute left-5 bg-bbred px-3`
+            }>
+            <span
+              className={
+                productData.isNewArrival
+                  ? `text-bbred font-semibold`
+                  : `text-white `
+              }>
               {productData.isNewArrival
                 ? "สินค้ามาใหม่"
                 : productData.isBestSeller
