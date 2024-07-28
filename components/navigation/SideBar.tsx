@@ -89,16 +89,19 @@ const SideBar = ({
               onselect={setSelectCate}
               onClose={onClose}
             />
-            {category.data?.map((item) => (
-              <SidebarList
-                key={item._id}
-                id={item._id}
-                name={item.title}
-                selecCate={selecCate}
-                onselect={setSelectCate}
-                onClose={onClose}
-              />
-            ))}
+            {category.data
+              ?.slice()
+              .sort((a, b) => a.title.localeCompare(b.title, "th"))
+              .map((item) => (
+                <SidebarList
+                  key={item._id}
+                  id={item._id}
+                  name={item.title}
+                  selecCate={selecCate}
+                  onselect={setSelectCate}
+                  onClose={onClose}
+                />
+              ))}
             {loadingsideBarcontent}
           </motion.div>
         </motion.div>

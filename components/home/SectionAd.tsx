@@ -28,7 +28,7 @@ const SectionAd = () => {
             />
           </div>
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <div className="mb-16 flex h-[300px] justify-center items-center ">
             <img
               src="/banner/content_2.png"
@@ -36,7 +36,7 @@ const SectionAd = () => {
               alt=""
             />
           </div>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide>
           <div className="mb-16 flex h-[300px] justify-center items-center ">
             <img
