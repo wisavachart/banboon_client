@@ -8,10 +8,17 @@ interface ProductCardPROP {
 
 const ProductCard = ({ productData }: ProductCardPROP) => {
   const { openModal, setProductIdModal, setFetchOn } = useModalStore();
+  function handleClick() {
+    setFetchOn();
+    setProductIdModal(productData._id);
+    openModal();
+  }
 
   return (
     <>
-      <div className="drop-shadow-xl rounded-[14px]">
+      <div
+        className="drop-shadow-xl rounded-[14px] cursor-pointer"
+        onClick={handleClick}>
         <div className="relative flex-1">
           <div className="absolute left-5 bg-bbred px-3">
             <span className="text-white">
@@ -48,11 +55,7 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
                 </h1>
                 <button
                   className="px-2 py-1 bg-bbred text-white rounded-[5px]"
-                  onClick={() => {
-                    setFetchOn();
-                    setProductIdModal(productData._id);
-                    openModal();
-                  }}>
+                  onClick={handleClick}>
                   <span className="stage1:text-[13px] stage2:text-[16px] ">
                     ดูสินค้า
                   </span>
