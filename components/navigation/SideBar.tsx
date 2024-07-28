@@ -40,10 +40,10 @@ const SideBar = ({
               ease: [0, 0.71, 0.2, 1.01],
             },
           }}
-          className="fixed w-[300px] md:w-[360px] h-full z-40 bg-bbred drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]">
+          className="check fixed w-[300px] md:w-[360px] h-full right-0 z-40 bg-bbred drop-shadow-[0_0_8px_rgba(0,0,0,0.8)]">
           <div className="flex flex-col pt-3 px-5">
             <div
-              className="w-full flex justify-end hover:cursor-pointer "
+              className="w-full flex justify-start hover:cursor-pointer "
               onClick={onClose}>
               <FaXmark size={40} color="white" />
             </div>
