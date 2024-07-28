@@ -23,7 +23,7 @@ const Productmodal = () => {
             initial={{ opacity: 0, scale: 0, rotate: "12.5deg" }}
             animate={{ opacity: 1, scale: 1, rotate: "0deg" }}
             exit={{ opacity: 0, scale: 0, rotate: "0deg" }}
-            className={`${
+            className={` ${
               isPending ? "bg-transparent" : "bg-white"
             } rounded-md stage1:max-w-[320px] stage3:max-w-[480px] lg:max-w-[1000px]`}>
             {isPending ? (
@@ -32,7 +32,7 @@ const Productmodal = () => {
               <p>Error...</p>
             ) : (
               <>
-                <div className="flex flex-col  lg:flex-row">
+                <div className="flex flex-col  lg:flex-row  min-w-[320px]">
                   <div className="lg:flex-1">
                     <ProductModalImage
                       imgData={data?.media}
