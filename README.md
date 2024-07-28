@@ -34,3 +34,13 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Requirement from Admin Baanboon
+
+[X] 1. Nav bar หมวดสินค้าตกจอ ต้องย่อจอถึงจะเห็นหมวดล่างๆ ทั้งคอมพราวและiphone ช่วยปรับเรื่องสเกลด้วย
+[ ] 2. พอคลิกดูสินค้า ภาพสินค้ารายละเอียดไม่เท่ากัน ปรับสเกลเปนมาตรฐานทุกตัวด้วย
+[ ] 3. ให้เพิ่มฟังชันแค่ “คลิกที่รูป” ก็ดูสินค้าได้ ไม่ต้องมากดปุ่ม ดูสินค้า อย่างเดียว
+[ ] 4. พื้นสีของคำว่า “สินค้าใหม่” เปลี่ยนจากแดง เป็น สีเหลือง (ส่วน “สินค้าขายดี” พื้นสีแดงเหมือนเดิมสวยแล้ว)
+[ ] 5. ให้หมวดสินค้า + product เรียงสลับไปมาได้ ว่าจะเอาอะไรขึ้นก่อน สามารถแมนเนจได้
+[ ] 6. เรียงอักษร หมวดสินค้าให้อัตโนมัติ ก-ฮ a-z
+[ ] 7. เอารูป ปชสพ รุป2 ออกให้ด้วย ไม่งั้น พิมคำอื่นในนั้นแทนไปก่อน + ลบคำในวิดีโอด้วย

@@ -73,7 +73,7 @@ const SideBar = ({
             exit={{
               opacity: 0,
             }}
-            className="overflow-y-scroll h-full"
+            className="scrollable-menu"
             id="style-3">
             <SideBarListStatic
               id="newavailable"
