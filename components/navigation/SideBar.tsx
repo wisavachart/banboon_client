@@ -76,15 +76,15 @@ const SideBar = ({
             className="scrollable-menu"
             id="style-3">
             <SideBarListStatic
-              id="newavailable"
-              name="สินค้ามาใหม่"
+              id="bestseller"
+              name="สินค้าขายดี"
               selecCate={selecCate}
               onselect={setSelectCate}
               onClose={onClose}
             />
             <SideBarListStatic
-              id="bestseller"
-              name="สินค้าขายดี"
+              id="newavailable"
+              name="สินค้ามาใหม่"
               selecCate={selecCate}
               onselect={setSelectCate}
               onClose={onClose}
