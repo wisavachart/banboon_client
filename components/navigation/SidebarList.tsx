@@ -49,7 +49,7 @@ const SidebarList = ({
             }></motion.div>
         )}
 
-        <h3 className="prompt-light text-[20px] px-4 py-5 text-white">
+        <h3 className="prompt-light text-[18px] px-2 py-3 text-white">
           {name}
         </h3>
       </motion.div>
