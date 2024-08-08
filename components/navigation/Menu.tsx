@@ -19,7 +19,9 @@ const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
         </div>
       </Link>
 
-      <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+      <div
+        onClick={onClick}
+        className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
         <TbCategory2 size="18px" />
         <p>หมวดหมู่สินค้า</p>
       </div>
