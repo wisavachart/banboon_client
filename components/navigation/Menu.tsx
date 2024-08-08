@@ -11,9 +11,9 @@ const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
     onCategoryClick();
   }
   return (
-    <div className="flex justify-between font-bold relative z-20 mt-1">
+    <div className="flex justify-between font-bold relative z-20 mt-1 ">
       <Link href="/catalog" onClick={() => setSelectCate("")}>
-        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500 lg:text-[20px] lg:px-3 lg:py-2">
           <BiHome size="18px" />
           <p>หน้าแรก</p>
         </div>
@@ -21,12 +21,12 @@ const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
 
       <div
         onClick={onClick}
-        className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+        className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500 lg:text-[20px] lg:px-3 lg:py-2">
         <TbCategory2 size="18px" />
         <p>หมวดหมู่สินค้า</p>
       </div>
       <Link href="/contact">
-        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500 lg:text-[20px] lg:px-3 lg:py-2">
           <BsTelephoneFill />
           <p>ติดต่อเรา</p>
         </div>
