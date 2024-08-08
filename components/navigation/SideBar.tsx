@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FaXmark } from "react-icons/fa6";
 import SidebarList from "./SidebarList";
 import SideBarListStatic from "./SidebarListStatic";
+import { TbCategory2 } from "react-icons/tb";
 
 const SideBar = ({
   isOpen,
@@ -57,7 +58,8 @@ const SideBar = ({
               exit={{
                 opacity: 0,
               }}
-              className=" w-full flex mt-5 pb-5">
+              className=" w-full flex items-center gap-2 mt-5 pb-5">
+              <TbCategory2 size="24px" color="white" />
               <h1 className="text-white prompt-medium text-[24px] md:text-[28px]">
                 หมวดหมู่สินค้า
               </h1>
@@ -78,6 +80,7 @@ const SideBar = ({
             <SideBarListStatic
               id="bestseller"
               name="สินค้าขายดี"
+              tagname="Best Seller"
               selecCate={selecCate}
               onselect={setSelectCate}
               onClose={onClose}
@@ -85,6 +88,7 @@ const SideBar = ({
             <SideBarListStatic
               id="newavailable"
               name="สินค้ามาใหม่"
+              tagname="New Arrival"
               selecCate={selecCate}
               onselect={setSelectCate}
               onClose={onClose}
