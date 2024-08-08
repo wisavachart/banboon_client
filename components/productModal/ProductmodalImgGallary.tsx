@@ -23,13 +23,11 @@ const ProductmodalImgGallary = ({ gallary }: GallaryPROPS) => {
       className="mySwiper">
       {gallary?.map((item) => (
         <SwiperSlide key={item}>
-          <div className="mb-16 flex h-[250px] stage3:h-[480px] lg:h-[500px] justify-center items-center">
-            <img
-              src={item ? item : "/product_img_test.jpg"}
-              className="object-cover w-full h-[250px] stage3:h-[480px] lg:h-[500px] "
-              alt=""
-            />
-          </div>
+          <img
+            src={item ? item : "/product_img_test.jpg"}
+            className="object-cover w-full h-auto stage3:h-[480px] lg:h-[500px]"
+            alt=""
+          />
         </SwiperSlide>
       ))}
     </Swiper>

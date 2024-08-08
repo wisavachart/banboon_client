@@ -17,7 +17,7 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
   return (
     <>
       <div
-        className="drop-shadow-xl rounded-[14px] cursor-pointer bg-white "
+        className="drop-shadow-md md:drop-shadow-lg rounded-[14px] cursor-pointer bg-white "
         onClick={handleClick}>
         {/* TOP */}
         <div className="relative ">
@@ -54,7 +54,7 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
           </div>
         </div>
         {/* Detail */}
-        <div className="stage1:text-[13px] h-[130px] stage2:h-[160px] stage2:text-[16px] flex flex-col justify-between px-4 py-4 gap-2 bg-white rounded-b-[14px]">
+        <div className="stage1:text-[13px] h-[160px] stage2:h-[160px] stage2:text-[16px] flex flex-col justify-between px-4 py-4 gap-2 bg-white rounded-b-[14px]">
           <div>
             {" "}
             {productData?.category?.title ? (

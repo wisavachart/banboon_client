@@ -45,7 +45,7 @@ const ProductBestSellerPage = () => {
         ) : isError ? (
           <p>Error</p>
         ) : (
-          <div className="flex flex-col gap-10 ">
+          <div className="flex flex-col gap-10">
             {/* SEARCH */}
             <input
               className="rounded-md text-[16px] mx-6 sm:mx-6 md:mx-6 lg:mx-6 xl:mx-0 p-3 mt-5 md:w-[400px] border-2"
