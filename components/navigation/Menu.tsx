@@ -1,27 +1,33 @@
 import { NavbarProps } from "@/lib/types";
 import Link from "next/link";
+import { BiCategory, BiHome } from "react-icons/bi";
+import { BsTelephone, BsTelephoneFill } from "react-icons/bs";
+import { FcContacts } from "react-icons/fc";
+import { HiHome } from "react-icons/hi2";
+import { TbCategory2 } from "react-icons/tb";
 
 const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
   function onClick() {
     onCategoryClick();
   }
   return (
-    <div className="flex justify-between font-bold relative z-20">
+    <div className="flex justify-between font-bold relative z-20 mt-1">
       <Link href="/catalog" onClick={() => setSelectCate("")}>
-        <p className="bg-bbredsec px-3 py-2 rounded-md shadow-md cursor-pointer hover:bg-red-500">
-          หน้าแรก
-        </p>
+        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+          <BiHome size="18px" />
+          <p>หน้าแรก</p>
+        </div>
       </Link>
 
-      <p
-        className="bg-bbredsec hover:bg-red-500 px-3 py-2 rounded-md shadow-md cursor-pointer"
-        onClick={onClick}>
-        หมวดหมู่สินค้า
-      </p>
+      <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+        <TbCategory2 size="18px" />
+        <p>หมวดหมู่สินค้า</p>
+      </div>
       <Link href="/contact">
-        <p className="bg-bbredsec hover:bg-red-500 px-3 py-2 rounded-md shadow-md cursor-pointer">
-          ติดต่อเรา
-        </p>
+        <div className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[14px] cursor-pointer hover:bg-red-500">
+          <BsTelephoneFill />
+          <p>ติดต่อเรา</p>
+        </div>
       </Link>
     </div>
   );
