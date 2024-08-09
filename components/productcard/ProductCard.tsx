@@ -17,15 +17,15 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
   return (
     <>
       <div
-        className="drop-shadow-md md:drop-shadow-lg rounded-[14px] cursor-pointer bg-white "
+        className="outline-1 drop-shadow-md md:drop-shadow-lg rounded-[14px] cursor-pointer bg-white "
         onClick={handleClick}>
         {/* TOP */}
         <div className="relative ">
           <div
             className={
               productData.isNewArrival
-                ? `absolute left-5 bg-bbyellow px-3`
-                : `absolute left-5 bg-bbred px-3`
+                ? `absolute left-5 bg-bbyellow px-3 rounded-b-md`
+                : `absolute left-5 bg-bbred px-3 rounded-b-md`
             }>
             <span
               className={
@@ -56,13 +56,14 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
         {/* Detail */}
         <div className="stage1:text-[13px] h-[160px] stage2:h-[160px] stage2:text-[16px] flex flex-col justify-between px-4 py-4 gap-2 bg-white rounded-b-[14px]">
           <div>
-            {" "}
             {productData?.category?.title ? (
-              <h6>{productData.category.title}</h6>
+              <p className="leading-none mb-1 font-normal text-[14px] text-gray-400">
+                {productData.category.title}
+              </p>
             ) : (
               <h6>no category</h6>
             )}
-            <h2 className="prompt-semibold stage1:text-[14px] stage2:text-lg card_preview_title">
+            <h2 className=" prompt-semibold stage1:text-[14px] stage2:text-[16px] card_preview_title ">
               {productData.title}
             </h2>
           </div>
