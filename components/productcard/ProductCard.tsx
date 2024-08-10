@@ -24,14 +24,14 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
           <div
             className={
               productData.isNewArrival
-                ? `absolute left-5 bg-bbyellow px-3 rounded-b-md`
-                : `absolute left-5 bg-bbred px-3 rounded-b-md`
+                ? `absolute left-0 bg-bbyellow px-3 rounded-tr-md rounded-br-md bottom-0`
+                : `absolute left-0 bg-bbred px-3 rounded-tr-md rounded-br-md bottom-0`
             }>
             <span
               className={
                 productData.isNewArrival
-                  ? `text-bbred font-semibold`
-                  : `text-white `
+                  ? `text-bbred font-semibold stage1:text-[12px]`
+                  : `text-white stage1:text-[12px]`
               }>
               {productData.isNewArrival
                 ? "สินค้ามาใหม่"
@@ -67,16 +67,14 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
               {productData.title}
             </h2>
           </div>
-          <div className=" flex justify-between">
+          <div className="flex justify-between ">
             <h1 className="stage1:text-[16px] stage2:text-xl prompt-extrabold text-xl">
               {productData.price} บาท
             </h1>
             <button
               className="px-2 py-1 bg-bbred text-white rounded-[5px]"
               onClick={handleClick}>
-              <span className="stage1:text-[13px] stage2:text-[16px] ">
-                ดูสินค้า
-              </span>
+              <span className="text-[16px]">ดูสินค้า</span>
             </button>
           </div>
         </div>
