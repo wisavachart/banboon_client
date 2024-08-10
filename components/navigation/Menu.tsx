@@ -18,7 +18,6 @@ const Menu = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
           <p>หน้าแรก</p>
         </div>
       </Link>
-
       <div
         onClick={onClick}
         className="flex bg-bbredsec justify-center items-center gap-2 px-2 py-1 rounded-md shadow-md text-[12px] cursor-pointer hover:bg-red-500 lg:text-[20px] lg:px-3 lg:py-2">

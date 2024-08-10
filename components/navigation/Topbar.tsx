@@ -12,8 +12,8 @@ const Topbar = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
     <AnimatePresence>
       <motion.nav
         exit={{ opacity: 0, scale: 100 }}
-        className="mx-auto w-full fixed z-30">
-        <div className="max-w-[1440px]  bg-bbred text-white content-center mx-auto pt-2 px-8 md:px-6 sm:pt-4 md:pt-4 relative">
+        className="mx-auto w-full fixed z-30 ">
+        <div className="stage1:px-2 stage2:px-8 stage2:max-w-[1440px] bg-bbred text-white content-center mx-auto pt-2 px-8 md:px-6 sm:pt-4 md:pt-4 relative">
           {isVisible && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -43,7 +43,7 @@ const Topbar = ({ onCategoryClick, setSelectCate }: NavbarProps) => {
                 damping: 15,
                 ease: [0, 0.71, 0.2, 1.01],
               }}
-              className="max-w-[1140px] content-center mx-auto flex justify-between">
+              className=" max-w-[1140px] content-center mx-auto flex justify-between">
               <div className="flex-col flex-1">
                 <div>
                   <Menu

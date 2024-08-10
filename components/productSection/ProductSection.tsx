@@ -58,7 +58,7 @@ const ProductSection = ({ params }: ProductSectionBycategoryProps) => {
               placeholder="ค้นหาชื่อสินค้า"
             />
             {/* PRODUCT */}
-            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8 gap-2 lg:px-0 md:px-6 sm:px-6 px-6">
+            <div className="grid gap-6 stage1:px-12 stage2:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8  lg:px-0 md:px-6 sm:px-6 stage2:px-6">
               {data?.productBycategory
                 .sort((a, b) => a.title.localeCompare(b.title))
                 .map((product) => (
