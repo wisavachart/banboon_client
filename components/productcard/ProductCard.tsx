@@ -22,7 +22,7 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
         {/* TOP */}
         <div className="relative ">
           <div className="w-[35px] absolute right-4 top-3">
-            <img src="bb_icon.svg" alt="icon" />
+            <img src="/bb_icon.svg" alt="icon" />
           </div>
           <div
             className={
