@@ -23,7 +23,7 @@ const Catalog = () => {
           </h6>
           {switchOn && (
             <h6 className="text-white md:text-[20px]">
-              จำนวนที่พบ : {data?.length} ชิ้น
+              ผลลัพธ์ : {data?.length} ชิ้น
             </h6>
           )}
         </div>
