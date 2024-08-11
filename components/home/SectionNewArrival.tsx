@@ -32,7 +32,7 @@ const SectionNewArrival = () => {
         </Link>
       </div>
       {/* SECTION WRAPPER */}
-      <div className="grid gap-6 stage1:px-12 stage2:grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8  lg:px-0 md:px-6 sm:px-6 stage2:px-6">
+      <div className="grid stage1:gap-2 stage2:gap-6 grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 lg:gap-8 md:gap-8 sm:gap-8  lg:px-0 md:px-6 sm:px-6 stage2:px-6">
         {randdomNewArrival.map((data) => (
           <ProductCard key={data._id} productData={data} />
         ))}

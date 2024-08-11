@@ -71,11 +71,11 @@ const ProductCard = ({ productData }: ProductCardPROP) => {
             </h2>
           </div>
           <div className="flex justify-between ">
-            <h1 className="stage1:text-[16px] stage2:text-xl prompt-extrabold text-xl">
+            <h1 className="stage1:text-[22px] stage2:text-xl prompt-extrabold text-xl">
               {productData.price} บาท
             </h1>
             <button
-              className="px-2 py-1 bg-bbred text-white rounded-[5px]"
+              className="stage1:hidden stage2:block px-2 py-1 bg-bbred text-white rounded-[5px]"
               onClick={handleClick}>
               <span className="text-[16px]">ดูสินค้า</span>
             </button>
