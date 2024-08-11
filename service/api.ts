@@ -14,6 +14,11 @@ const axiosInstance = axios.create({ baseURL: BASE_URL });
 //     await axiosInstance.get<Product[]>("/products?new=newarrival")
 //   ).data.map((newProd) => newProd);
 // };
+export const getSearhAllProduct = async (search?: string) => {
+  return (await axiosInstance.get<Product[]>(`/products?search=${search}`))
+    .data;
+};
+
 export const getNewArrivalProduct = async (page = 1, search?: string) => {
   return (
     await axiosInstance.get<NewProductResponse>(

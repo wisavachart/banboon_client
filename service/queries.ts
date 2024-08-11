@@ -6,6 +6,7 @@ import {
   getNewArrivalProduct,
   getProductbyCategoryID,
   getProductbyId,
+  getSearhAllProduct,
 } from "./api";
 
 export function useNewProduct(page: number, search?: string) {
@@ -53,6 +54,14 @@ export function useGetproductByID(id: string, fetchSwith: boolean) {
   return useQuery({
     queryKey: ["productdetailbyid", id],
     queryFn: () => getProductbyId(id),
+    enabled: fetchSwith,
+  });
+}
+
+export function useGetSearchAllProduct(fetchSwith: boolean, search?: string) {
+  return useQuery({
+    queryKey: ["searchallproduct", search],
+    queryFn: () => getSearhAllProduct(search),
     enabled: fetchSwith,
   });
 }
