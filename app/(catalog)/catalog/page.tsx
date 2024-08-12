@@ -28,7 +28,7 @@ const Catalog = () => {
     <div className="max-w-[1140px] mx-auto stage1:pt-[13rem] stage2:pt-[15rem] stage3:pt-[17rem] stage4:pt-[20rem] sm:pt-[22rem] md:pt-[20rem] lg:pt-[21rem] ">
       <div
         onClick={contollerSearchButton}
-        className="ml-3 md:ml-0 cursor-pointer hover:bg-bbredsec mt-5 rounded-md relative z-40  bg-bbred flex  w-fit items-center gap-2 px-2 py-1">
+        className="ml-3 md:ml-0 cursor-pointer hover:bg-bbredsec mt-10 rounded-md relative   bg-bbred flex  w-fit items-center gap-2 px-2 py-1">
         <BiSearch color="white" size="22px" />
         <h6 className="text-white md:text-[20px]">ค้นหาสินค้า</h6>
         <div className={isSearchBTNOn ? `rotate-0` : `-rotate-90`}>
