@@ -33,15 +33,24 @@ const Productmodal = () => {
               <p>Error...</p>
             ) : (
               <>
-                <div className="flex flex-col lg:flex-row min-w-[320px] relative ">
+                <div className="flex flex-col  lg:max-h-fit lg:flex-row min-w-[320px] relative ">
+                  <div className="w-[40px] absolute left-4 top-4 z-50">
+                    <img src="/bb_icon.svg" alt="icon" />
+                  </div>
                   <div
-                    onClick={closeModal}
+                    onClick={() => {
+                      setFetchoff();
+                      closeModal();
+                    }}
                     className="hidden lg:flex cursor-pointer absolute top-0 z-50 right-0 rounded-full px-1 py-1 mr-3 mt-3 hover:bg-gray-300">
                     <FaXmark size="22px" />
                   </div>
                   <div className="lg:flex-1 relative">
                     <div
-                      onClick={closeModal}
+                      onClick={() => {
+                        setFetchoff();
+                        closeModal();
+                      }}
                       className="flex lg:hidden cursor-pointer absolute top-0 z-50 right-0 rounded-full px-1 py-1 mr-3 mt-3 hover:bg-gray-300">
                       <FaXmark size="22px" />
                     </div>
@@ -53,14 +62,17 @@ const Productmodal = () => {
                   <div className="p-4 lg:p-8 md:min-w-[500px] lg:flex-1 lg:flex lg:flex-col lg:justify-between ">
                     <ProductModalDetail producDetail={data} />
                     <button
-                      onClick={closeModal}
+                      onClick={() => {
+                        setFetchoff();
+                        closeModal();
+                      }}
                       type="button"
                       className="bg-bbred hover:bg-bbredsec hidden lg:block  text-white p-2 rounded-md text-[14px]  ">
                       ปิดหน้าต่าง
                     </button>
                   </div>
                 </div>
-                <div className="w-full flex justify-end pb-4 pr-4 lg:hidden">
+                {/* <div className="w-full flex justify-end pb-4 pr-4 lg:hidden">
                   <button
                     onClick={() => {
                       setFetchoff();
@@ -70,7 +82,7 @@ const Productmodal = () => {
                     className="bg-bbred hover:bg-bbredsec  text-white p-2 rounded-md text-[14px] ">
                     ปิดหน้าต่าง
                   </button>
-                </div>
+                </div> */}
               </>
             )}
           </motion.div>

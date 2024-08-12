@@ -6,7 +6,7 @@ interface ProductModalDetailPROPS {
 
 const ProductModalDetail = ({ producDetail }: ProductModalDetailPROPS) => {
   return (
-    <div className="w-full flex flex-col mb-3 mt-3">
+    <div className=" h-[230px] overflow-y-scroll lg:overflow-y-hidden lg:h-fit w-full flex flex-col mb-3 mt-3">
       <div className=" flex flex-col gap-3">
         <div
           className={
